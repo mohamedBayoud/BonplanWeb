@@ -1,0 +1,9 @@
+bon_plan_homepage:
+    path:     /
+    defaults: { _controller: BonPlanBundle:Default:index }
+
+DashBoard:
+    path:     /layout
+    defaults: { _controller: BonPlanBundle:Default:DashBoard }
+
+

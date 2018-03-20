@@ -1,0 +1,30 @@
+bon_plan:
+    resource: "@BonPlanBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+Register:
+    path:     /register
+    defaults: { _controller: UserBundle:Default:register }
+
+Login:
+    path:     /login
+    defaults: { _controller: UserBundle:Default:login }
+
+ShowUser:
+    path:     /profile
+    defaults: { _controller: UserBundle:Default:show }
+
+Edit:
+    path:     /profile/edit
+    defaults: { _controller: UserBundle:Default:edit }
+
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
