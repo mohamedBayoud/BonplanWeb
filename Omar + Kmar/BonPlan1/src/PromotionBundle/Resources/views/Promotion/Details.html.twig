@@ -1,0 +1,96 @@
+{% extends 'Layout.html.twig' %}
+{% block body  %}
+
+    <div class="row">
+        <!--hotel three-fourth content-->
+        <section class="three-fourth">
+            <!--gallery-->
+            <div class="gallery">
+                <ul id="image-gallery" class="cS-hidden">
+                    <li data-thumb="images/uploads/hotel4.jpg">
+                        <img src="images/uploads/hotel4.jpg" alt="" />
+                    </li>
+                    <li data-thumb="images/uploads/hotel1.jpg">
+                        <img src="images/uploads/hotel1.jpg" alt="" />
+                    </li>
+                    <li data-thumb="images/uploads/hotel2.jpg">
+                        <img src="images/uploads/hotel2.jpg" alt="" />
+                    </li>
+                    <li data-thumb="images/uploads/hotel5.jpg">
+                        <img src="images/uploads/hotel5.jpg" alt="" />
+                    </li>
+                    <li data-thumb="images/uploads/hotel3.jpg">
+                        <img src="images/uploads/hotel3.jpg" alt="" />
+                    </li>
+                    <li data-thumb="images/uploads/hotel6.jpg">
+                        <img src="images/uploads/hotel6.jpg" alt="" />
+                    </li>
+                </ul>
+            </div>
+            <!--//gallery-->
+            <!--inner navigation-->
+            <nav class="inner-nav">
+                <ul>
+                    <li class="availability"><a href="#availability" title="Availability">Availability</a></li>
+                    <li class="description"><a href="#description" title="Description">Description</a></li>
+                    <li class="location"><a href="#location" title="Location">Location</a></li>
+
+                </ul>
+            </nav>
+            <!--//inner navigation-->
+{% for p in Promo %}
+            <!--availability-->
+            <section id="availability" class="tab-content">
+                <article>
+                    <h2>Availability</h2>
+                    <div class="text-wrap">
+                        <a href="#" class="gradient-button right" title="Change dates">Change dates</a>
+                        <p>Available rooms from <span class="date">Thurs 29 Nov 2016</span> to <span class="date">Fri 30 Nov 2016</span>.</p>
+                        <p>{{ p.prix }}</p>
+
+                    </div>
+
+
+                        <!--//room-->
+                    </ul>
+                </article>
+            </section>
+            <!--//availability-->
+
+            <!--description-->
+            <section id="description" class="tab-content">
+                <article>
+                    <h2>General</h2>
+                    <div class="text-wrap">
+                        <p>{{ p.description }}</p>
+                    </div>
+
+
+                </article>
+            </section>
+            <!--//description-->
+
+            <!--facilities-->
+         >
+
+
+            <!--location-->
+            <section id="location" class="tab-content">
+                <article>
+                    <!--map-->
+                    <div class="gmap" id="map_canvas"></div>
+                    <!--//map-->
+                </article>
+            </section>
+            <!--//location-->
+
+            <!--reviews-->
+
+</section>
+    </div>
+
+        <!--//hotel content-->
+{% endfor %}
+
+    </div>
+{% endblock %}

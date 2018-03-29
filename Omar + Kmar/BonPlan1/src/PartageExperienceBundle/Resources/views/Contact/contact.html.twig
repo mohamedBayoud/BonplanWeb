@@ -1,0 +1,44 @@
+{% extends "layout.html.twig" %}
+{% block body %}
+    <div class="row">
+        <!--three-fourth content-->
+        <div class="three-fourth">
+            <h1>Contact us</h1>
+            <!--map-->
+            <div class="map-wrap">
+                <div class="gmap" id="map_canvas"></div>
+            </div>
+            <!--//map-->
+        </div>
+        <aside class="one-fourth right-sidebar lower">
+        <!--contact form-->
+        <article class="widget">
+            <h4>Send us a message</h4>
+
+            <form method="post" action="{{ path('Contact') }}" >
+                        {{ form_errors(form) }}
+                    {{ form_start(form) }}
+                <fieldset>
+                    <div id="message"></div>
+                    <div class="row">
+                        <div class="f-item full-width">
+                            <label for="name">Your name</label>
+                            {{ form_widget(form.name) }}
+                        </div>
+                        <div class="f-item full-width">
+                            <label for="email">Your e-mail</label>
+                            {{ form_widget(form.email) }}
+                        </div>
+                        <div class="f-item full-width">
+                            <label for="comments">Your message</label>
+                            {{ form_widget(form.comments) }}
+                        </div>
+                        <div class="f-item full-width">
+                            {{ form_widget(form.Envoyer,{'attr':{'type':'text','class':'form-control border-top-0 border-left-0 border-right-0 rounded-0 pl-4','placeholder':''}}) }}                        </div>
+                    </div>
+                </fieldset>
+                {{ form_end(form) }}
+            </form>
+        </article>
+        </aside>
+{% endblock %}

@@ -1,0 +1,19 @@
+bon_plan_homepage:
+    path:     /index
+    defaults: { _controller: BonPlanBundle:Default:index }
+
+DashBoard:
+    path:     /layout
+    defaults: { _controller: BonPlanBundle:Default:DashBoard }
+
+ContactAdmin:
+    path:     /layout/Contact
+    defaults: { _controller: BonPlanBundle:Default:ListContacts }
+
+ModifierContact:
+    path:     /layout/Contact/Modifier
+    defaults: { _controller: BonPlanBundle:Default:ModifierContact }
+
+SupprimerContact:
+    path:     /layout/Contact/{id}
+    defaults: { _controller: BonPlanBundle:Default:SupprimerContact }

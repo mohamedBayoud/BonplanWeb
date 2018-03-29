@@ -1,0 +1,27 @@
+{{ form(F) }}
+<table border=1>
+    <tr>
+        <th>Note Service</th>
+        <th>Note Rapport</th>
+        <th>Note Confort</th>
+        <th>Note Personnel</th>
+        <th>Commentaire</th>
+        <th>Date</th>
+        <th>Mettre à jour</th>
+        <th>Suppression</th>
+
+
+    </tr>
+    {% for p in P %}
+        <tr>
+            <td>{{ p.NoteServiceH }}</td>
+            <td>{{ p.NoteRapportH }}</td>
+            <td>{{ p.NoteConfortH }}</td>
+            <td>{{ p.NotePersonnelH }}</td>
+            <td>{{ p.commentaireAvisH }}</td>
+            <td>{{ p.DateCommentaireH|date }}</td>
+
+        </tr>
+
+    {% endfor %}
+</table>

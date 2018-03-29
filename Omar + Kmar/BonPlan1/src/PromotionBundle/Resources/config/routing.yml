@@ -1,0 +1,26 @@
+promotion_homepage:
+    path:     /
+    defaults: { _controller: PromotionBundle:Default:index }
+
+
+AjoutPromotion:
+    path:     /AjoutPromotion
+    defaults: { _controller: PromotionBundle:Promotion:AjoutPromotion }
+
+AffichePromotion:
+    path:     /AffichePromotion
+    defaults: { _controller: PromotionBundle:Promotion:AffichePromotion }
+
+ModifierPromotion:
+    path:     /ModifierPromotion
+    defaults: { _controller: PromotionBundle:Promotion:ModifierPromotion }
+
+SupprimerPromotion:
+    path:     /SupprimerPromotion/{id}
+    defaults: { _controller: PromotionBundle:Promotion:SupprimerPromotion }
+Details:
+    path:     /Details/{id}
+    defaults: { _controller: PromotionBundle:Promotion:Details }
+
+
+
